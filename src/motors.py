@@ -3,8 +3,6 @@ from math import *
 
 
 def nema17():
-
-    # --- Dimensions from the drawing ---
     body_size = 42.0
     body_thickness = 20.0
     hole_pitch = 31.0

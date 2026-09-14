@@ -1,19 +1,21 @@
 
 
-Install the VS Code Extension
+1. Install the VS Code Extension
 
  - Open VS Code.
  - Go to the Extensions tab on the left sidebar (Ctrl+Shift+X or Cmd+Shift+X).
  - Search for OCP CAD Viewer and click Install.
 
 
-Install `build123d` and `ocp-vscode` 
+2. Install `build123d` and `ocp-vscode` 
 
 ```
-python3 -m venv .venv
-source .venv/bin/activate
-pip install --upgrade pip
-pip install build123d ocp-vscode
+chmod+x ./install.sh
+./install.sh
 ```
 
-run `dune.py`
+3. Run
+
+```
+.venv/bin/python dune.py
+```
