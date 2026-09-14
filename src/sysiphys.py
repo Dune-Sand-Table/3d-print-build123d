@@ -1,8 +1,9 @@
 from ocp_vscode import show
 from build123d import *
 from math import *
-from src.gears import *
-from src.motors import *
+from gears import *
+from motors import *
+from pathlib import Path
 
 def b830():
     return Box(165/2, 55, 8.5)
@@ -227,7 +228,12 @@ show(bb, bg, stand, sideGear, largeGear,
     slot, rack, magnetHolder, centralGear,  
     sideMotor, centralMotor)
 
-export_step(slot, "/Users/sq/dev/3dprint/sysiphus/slot.step")
-export_step(rack, "/Users/sq/dev/3dprint/sysiphus/rack.step")
-export_step(centralGear, "/Users/sq/dev/3dprint/sysiphus/centralGear.step")
-export_step(largeGear, "/Users/sq/dev/3dprint/sysiphus/largeGear.step")
+
+
+dir_path = Path("./models")
+dir_path.mkdir(parents=True, exist_ok=True)
+
+export_step(slot, "./models/slot.step")
+export_step(rack, "./models/rack.step")
+export_step(centralGear, "./models/centralGear.step")
+export_step(largeGear, "./models/largeGear.step")
